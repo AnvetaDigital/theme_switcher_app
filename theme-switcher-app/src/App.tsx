@@ -10,19 +10,20 @@ import Blog from "./components/Blog";
 const App: React.FC = () => {
   const { theme } = useTheme();
 
-  const contentClasses = theme === "theme2" ? "pl-60 pt-4" : "pt-16";
+  const contentClasses =
+    theme === "theme2" ? "flex-1 mt-16 md:mt-0 md:ml-56 p-4" : "pt-16";
 
   return (
-      <Router>
-        <Header />
-        <div className={contentClasses}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-        </div>
-      </Router>
+    <Router>
+      <Header />
+      <div className={contentClasses}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

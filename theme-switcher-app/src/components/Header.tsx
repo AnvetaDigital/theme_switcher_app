@@ -50,13 +50,13 @@ const Header: React.FC = () => {
 
   return (
     <motion.aside
-      className="fixed top-0 left-0 h-screen w-56 bg-gray-800 text-white flex flex-col p-4"
+      className="fixed top-0 left-0 h-auto md:h-screen w-full md:w-56 bg-gray-800 text-white flex md:flex-col flex-row md:p-4 p-2"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
     >
       <h1 className="text-xl font-bold mb-6">Theme Switcher</h1>
-      <nav className="flex flex-col space-y-4">
+      <nav className="flex md:flex-col md:space-y-4 space-x-4 md:space-x-0">
         <Link to="/" className="hover:underline">
           Home
         </Link>
